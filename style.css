@@ -1,63 +1,89 @@
-
 body {
-    background-color: #dedede;
+	margin: 1%;
+	padding:1%;
+	background-color: rgb(204 204 255) !important;
+	font-size: 100%;
+	min-width: 500px;
+}
+
+header, footer {
+  background-color:#0066FF;
+  padding: 1%;
+  margin: 1%;
+}
+
+header h1 {
+	font-size: 3rem;
+	color:rgba(0,0,0,.7);;
+}
+
+section {
+  	margin:1%;
+    padding:1%;
+}
+
+nav a {
+	display:block;
+	background-color: white;
+	border: 1px solid black;
+	text-align: center;
+	border-radius: 35px;
+	text-decoration: none;
+	padding: 2%;
+	margin: 1%;
 }
 
 h1 {
-    text-align: center;
-    font-family:Arial, sans-serif;
-    font-size: 32px;
+	text-align: center;
+	color:rgba(255,0,0,.7);;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-    font-family:Arial, sans-serif;
+img {
+	width: 20%;
+	margin-right: 2%;
 }
 
-p {
-   font-size: 25px;
-   font-family:Arial, sans-serif;
+.myClass {
+	margin: 0em 1em;
+	padding:.75em;
+	border: 1px solid black;
+	border-radius: .25%;
+
+	/* Safari and Chrome*/
+	-webkit-column-count:3;
+	-moz-column-count: 3;
+	column-count:3;
+	
 }
 
-img{
-  width:100%;
+ol {
+	list-style:upper-roman; 
+	margin:1em;
 }
 
-
-p{
-  text-align:center;
+footer {
+	clear: both;
+	text-align:center;
+	text-transform: uppercase;
 }
 
-div img{
-    width:150px;
-    height: 150px;
-    display:block;
-    margin:auto;
+@media only screen and (min-width: 900px)
+{
+	header, footer {
+  	background-color: rgb(204 204 255) !important;
+  }
 }
 
-div{
-  display: inline-block;
-  width: 24%;
-  margin: 5px;
-  padding: 2px;
-}
+@media print and (max-width: 900px) 
+{
+	body, header, footer {
+		background-color: #ffffff;
+	}
 
-
-/* Requête n°1 - Vue tablette */
-@media screen and (min-width: 772px) {
-    div {
-        width: 45%;
-    }
-
-    img {
-        max-height: 30%;
-    }
-}
-
-/* Requête n°2 - Vue grand écran */
-@media screen and (min-width: 998px) {
-    div {
-        width: 30%;
-    }
+	nav a {
+		border:none;
+		padding: 0px;
+		margin: 0 auto;
+    	text-decoration: underline;
+	}	
 }
